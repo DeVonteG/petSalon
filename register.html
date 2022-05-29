@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
     <title>The Pet Palace</title>
 </head>
@@ -22,41 +23,93 @@
         <h2>Welcome to The Pet Palace</h2>
         <!-- registration form name,age,gender,breed,service,owner,phone -->
         <!--/---------------------------------------------------/-->
+        <!-- 
+            <div class="form-container">
+            <div></div>
+            <input type="text" placeholder="Enter Your Pets Name" id="txtName">
+            <input min=0 type="number" placeholder="Enter Your Pets Age" id="txtAge">
+            <input type="text" placeholder="Enter Pet Breed" id="txtBreed">
         
-        <!-- <input type="text" placeholder="Enter Your Pets Name" id="txtName">
-        <input min=0 type="number" placeholder="Enter Your Pets Age" id="txtAge">
-        <input type="text" placeholder="Enter Pet Breed" id="txtBreed">
-
-        <label>Pet</label>
-        <select id="selPet">
+            <label>Pet</label>
+            <select id="selPet">
             <option value="none" selected disabled hidden>Select a Pet</option> 
             <option value="Dog">Dog</option>
             <option value="Cat">Cat</option>
             <option value="Bird">Bird</option>
             <option value="Rodent">Rodent</option>
             <option value="Horse">Horse</option>
-        </select>
-        <label>Gender</label>
-        <select id="selPetGender">
+            </select>
+            <label>Gender</label>
+            <select id="selPetGender">
             <option value="Male">Male</option>
             <option value="Female">Female</option>
-        </select>
-        <select id="selService">
-            <option value="Blank"></option>
+             </select>
+            <select id="selService">
+            <option value="none" selected disabled hidden>Select a Service</option>
             <option value="Grooming">Grooming</option>
             <option value="Teeth Cleaning">Teeth Cleaning</option>
             <option value="Bath & Brush">Bath & Brush</option>
             <option value="Vaccines">Vaccines</option>
-        </select>
-        <input type="text" placeholder="Enter Your Name" id="txtName1">
-        <input type="text" placeholder="Enter Your Phone Number" id="txtNumber">
+            </select>
+            <input type="text" placeholder="Enter Your Name" id="txtName1">
+            <input type="text" placeholder="Enter Your Phone Number" id="txtNumber">
+            </div>
+            <button onclick="submit();">Submit</button>  -->
 
-        <button onclick="submit();">Submit</button>  -->
+        <div class="container">
+            <div class="mb-3">
+                <label class="form-label">Name:</label>
+                <input class="form-control" type="text" placeholder="Enter Pet's Name" id="txtName">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Age:</label>
+                <input min=0 class="form-control" type="number" placeholder="Add Pet's Age" id="txtAge">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Gender:</label>
+                <select class="form-select" id="selGender">
+                    <option value="none" selected disabled hidden>Select a Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Pet</label>
+                <select class="form-select" id="selPet">
+                    <option value="none" selected disabled hidden>Select a Pet</option>
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Bird">Bird</option>
+                    <option value="Rodent">Rodent</option>
+                    <option value="Horse">Horse</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Breed:</label>
+                <input class="form-control" type="text" placeholder="Enter Pet Breed" id="txtBreed">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Service:</label>
+                <select class="form-select" id="selService">
+                    <option value="none" selected disabled hidden>Select a Service</option>
+                    <option value="nails cut">Nail Trim</option>
+                    <option value="grooming">Grooming</option>
+                    <option value="vaccines">Vaccines</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Owner:</label>
+                <input class="form-control" type="text" placeholder="Enter Pet Owner" id="txtOwner">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Phone:</label>
+                <input class="form-control" type="text" placeholder="Enter Owner Phone" id="txtPhone">
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" onclick="register();">Register</button>
+            </div>
+        </div>
     </main>
-
-
-
-
     <footer id="info">
         <!-- display salon info -->
         
