@@ -17,51 +17,6 @@ let salon={
         pets:[]
 };
 
-// console.log(salon.pets[2]);
-
- // console.log("displaying");   
-// alert(`Registered Pets: ${salon.pets.length}`);
-
-
-// document.write(salon.name, salon.address.suite, salon.address.street);
-
-// function submit(){
-//     let petName=document.getElementById("txtName").value;
-//     let petAge=document.getElementById("txtAge").value;
-//     let petBreed=document.getElementById("txtBreed").value;
-//     let ownerName=document.getElementById("txtOwner").value;
-//     let ownerNumber=document.getElementById("txtPhone").value;
-
-//     console.log(petName, petAge, petBreed, ownerName, ownerNumber);
-// }
-
-
-// function displayPetInfo(){
-    // let info=`
-
-// pet constructor
-//name, age, gender, breed, service, owner, phone
-
-//  function Client(name,age,gender,breed,service,owner,phone){
-//     this.name=name;
-//     this.age=age;
-//     this.gender=gender;
-//     this.breed=breed;
-//     this.service=service;
-//     this.ownersName=owner;
-//     this.contactPhone=phone;
-// };
-
-// let client1 = new Client("Scooby",9,"Male","Great Dane","Grooming","Shaggy","555-555-5555");
-// let client2 = new Client("Rufus",2,"Male","Naked Mole Rat","Teeth Cleaning","Kim Possible","555-564-2235");
-// let client3 = new Client("Brian", 12,"Male","Lab","Grooming","Peter Griffin", "553-253-3390");
-
-// console.log(client1,client2,client3);
-
-// function register(){
-//     console.log(client1,client2,client3)
-// }
-
 class Client{
         constructor(name,age,gender,pet,breed,service,owner,phone){
         this.petName=name;
@@ -74,8 +29,15 @@ class Client{
         this.ownerPhone=phone;
     }
 };
+////////////////////////////////////////////////////////////////////
+// let client1 = new Client("Scooby",9,"Male","Great Dane","Grooming","Shaggy","555-555-5555");
+// let client2 = new Client("Rufus",2,"Male","Naked Mole Rat","Teeth Cleaning","Kim Possible","555-564-2235");
+// let client3 = new Client("Brian", 12,"Male","Lab","Grooming","Peter Griffin", "553-253-3390");
+////////////////////////////////////////////////////////////////////
+
 
 // let newClient = new Client()
+
     let petName=document.getElementById("txtName");
     let petAge=document.getElementById("txtAge");
     let petGender=document.getElementById("selGender");
@@ -85,51 +47,63 @@ class Client{
     let ownerName=document.getElementById("txtOwner");
     let ownerNumber=document.getElementById("txtPhone");
 
-function register(){
+/////////////////////////////////////////////////////////////////////////////////////
 
+// creating default pets
+let scooby= new Client("Scooby", 7,"Male","Dog","Dane","Grooming","Shaggy", "555-555-5555");
+let scrappy=new Client("Scrappy", 2, "Male","Dog","Mixed","Nail Trim","Shaggy","555-555-5555");
+// /////////////////////
+
+function isValid(aPet){
+    let valid=true;
+    if(aPet.petName=="" || aPet.petService=="" || aPet.ownerPhone==""){
+         // if we arrive here the pet is not valid   
+        valid=false;
+    }
+    return valid;
+}    
+function register(){
     console.log("Registering");
 
     newClient = new Client(petName.value, petAge.value, petGender.value, typePet.value, petBreed.value, petService.value, ownerName.value, ownerNumber.value);
-    
-    salon.pets.push(newClient);
-    console.log(newClient);
-    
-    clear();  
+
+    if(isValid(newClient)==true){
+        // push object to array
+        salon.pets.push(newClient);
+        console.log(newClient);
+        clear(); 
+    }
+    else{
+        alert("Add a name for the Pet");
+    }
 };
 function clear(){
-    petName.value="";
-    petAge.value="";
-    petGender.value="";
-    typePet.value="";
-    petBreed.value="";
-    petService.value=""; 
-    ownerName.value= "";
-    ownerNumber.value="";
+    // petName.value="";
+    // petAge.value="";
+    // petGender.value="";
+    // typePet.value="";
+    // petBreed.value="";
+    // petService.value=""; 
+    // ownerName.value= "";
+    // ownerNumber.value="";
+
+    $("input").val("");
+    $("select").val("");
 };
-    
-    
 
-// for(let i=0;i<new Client;i++){
-    //     console.log(new Client[i].value);
-    // };
-
-
-// register pets
-// get info from inputs
-// create object using constructor
-    // let newPet = new Client(petName,petAge,petGender,typePet,petBreed,petService,ownerName,ownerNumber);
-    // push object in on the array
-    // display it on console
-    
-
-// var theClient = new Client(petName.value, petAge.value etc)
-
-
-// salon.pets.push(newPet);
-// 
-//     getElementById("");
+// function clear(){
+//     let inputs=document.getElementsByTagName("input");
+//     for(let i=0;i<inputs.length;i++){
+//         inputs[i].value="";
+//     }
 // }
 
+// function clear(){
+//     let inputs=document.querySelector("input");
+//     for(let i=0;i<inputs.length;i++){
+//         inputs[i].value="";
+//     }   
+// }  
 function displaySalonInfo(){
     let tmp=`
     <p>Welcome to ${salon.name} located at ${salon.address.number} ${ salon.address.street}, Ste. ${salon.address.suite}, ${salon.address.city}, ${salon.address.zip} </p>`
@@ -139,5 +113,7 @@ function displaySalonInfo(){
 
 function init(){
     displaySalonInfo(); 
+    // salon.pets.push(newClient);
+    salon.pets.push(scooby,scrappy);
 }
 window.onload = init;

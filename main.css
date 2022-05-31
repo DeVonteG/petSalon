@@ -1,0 +1,85 @@
+*,*::before, *::after{
+box-sizing: border-box;
+}
+
+/* //////////////// */
+body{
+    margin: auto 6rem auto 6rem ;
+}
+.company-name{
+    font-family: 'Homemade Apple', cursive;
+    text-align: center;
+    margin-top: 3rem;
+    font-size:3.5rem;
+    color: #ffcc00;
+
+}
+.background{
+    display: flex;
+    margin: 2rem auto 2rem auto;
+    justify-content: center;
+    min-width: 100%;
+    height: auto;
+    /* border: 2px solid  red; */
+    padding: 4rem;
+}
+nav.menu{
+    /* display:flex;
+    align-items: center;
+    /* text-align: center; */
+    /* margin-bottom: 10rem; */
+    margin:4rem; 
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    font-size: 20px;
+    padding-top:2rem;
+    padding-bottom: 2rem;
+}
+.welcome{
+    text-align: center;
+    margin-top:4rem;
+    margin-bottom: 4rem;
+}
+/* home mission */
+.mission{
+    margin:4rem 4rem 4rem 4rem;
+    padding: 4rem;
+    /* border: 2px solid red; */
+}
+/* about bio */
+.about-me{
+    text-transform: capitalize;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right:2rem;
+    margin-bottom:2rem ;
+    /* border: 2px solid red; */
+    
+}
+#bio{
+    /* border:2px solid red; */
+    margin:2rem 2rem auto 2rem;
+    padding: 3rem;
+}
+
+#pets{
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    display: flex;
+}
+.pet{
+
+    background-color: #eec82e;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 1.5rem;
+    width: 14rem;
+}
+#info{
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}

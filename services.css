@@ -1,0 +1,118 @@
+.services{
+    display: flexbox;
+    width:80%;
+    margin-left: 10rem;
+    
+} 
+.teeth-brushing{
+    display: flexbox;
+    margin-bottom: 2rem;
+}
+.teeth-brushing-img img{
+    min-width: 50%;
+    /* margin-left: 19rem; */
+    width:50%;
+    height:50%;
+    
+}
+.teeth-brushing-text{
+    margin-top: 2rem;
+    text-align: center;
+    width: 50%;
+    /* margin-left:19rem ; */
+    
+}
+.grooming{
+    
+    display:flexbox;
+    margin-left: 21rem;
+    margin-bottom: 2rem;
+}
+.grooming-img img{
+    min-width: 50%;
+    margin-left: 19rem;
+    height:40vh;
+}
+.grooming-text{
+    margin-top: 2rem;
+    text-align: center;
+    width: 50%;
+    margin-left:19rem ;
+    
+}
+.nail-trim{
+    display:flexbox;
+    margin-bottom: 2rem;
+}
+.nail-trim-img img{
+    min-width: 50%;
+    /* margin-left: 19rem; */
+    height:40vh;
+}
+.trimming-text{
+    margin-top: 2rem;
+    text-align: center;
+    width: 50%;
+    /* margin-left:19rem ; */
+}
+.shampoo{
+    
+    display:flexbox;
+    margin-left: 21rem;
+    margin-bottom: 2rem; 
+    justify-items: right;
+}
+.shampoo-img img{
+    min-width: 50%;
+    margin-left: 19rem;
+    height:40vh;
+}
+.shampoo-text{
+    margin-top: 2rem;
+    text-align: center;
+    width: 50%;
+    margin-left:19rem ;  
+}
+.vaccines{
+    display:flexbox;
+    margin-bottom: 2rem; 
+}
+.vaccines-img img{
+    min-width: 50%;
+    /* margin-left: 19rem; */
+    height:40vh;
+}
+.vaccine-text{
+    margin-top: 2rem;
+    text-align: center;
+    width: 50%;
+    /* margin-left:19rem ; */
+    
+}
+.royal-pkg{
+    display:grid;
+    margin-left: 20rem;
+    margin-right: 5rem;
+    justify-items: right;
+}
+.royal-pkg-img img{
+    
+    min-width: 50%;
+    margin-left: 19rem;
+    margin-bottom: 2rem;
+    height: 50vh;
+    width: 27vw;
+}
+.royal-pkg-img1 img{
+   
+    min-width: 50%;
+    margin-left: 15rem;
+    height:40vh;
+}
+.royal-pkg-text{
+    margin-top: 2rem;
+    text-align: center;
+    width: 50%;
+    margin-left:19rem ;
+    
+}

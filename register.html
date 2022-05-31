@@ -5,57 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="stylesheet" href="main.css">
-    <title>The Pet Palace</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Roboto:wght@300&display=swap');
+        </style>
+    <link rel="stylesheet" href="main.css">
+    <title>🐾  The Pet Palace  🐾</title>
 </head>
 <body>
     <header>
-        <h1>The Pet Palace</h1>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="register.html">Register</a>
+        
+        <h1 class="company-name">🐾  The Pet Palace  🐾</h1>
+            <img class="background" src="img/cute-pup.jpg" alt="paw print">
+        <nav class="menu">
+            <a href="index.html" style="text-decoration: none;">Home 🏠</a>
+            <a href="about.html" style="text-decoration: none;">About</a>
+            <a href="services.html" style="text-decoration: none;">Services</a>
+            <a href="register.html" style="text-decoration: none;">Register</a>
         </nav>
     </header>
-    <main>
-        <h2>Welcome to The Pet Palace</h2>
-        <!-- registration form name,age,gender,breed,service,owner,phone -->
-        <!--/---------------------------------------------------/-->
-        <!-- 
-            <div class="form-container">
-            <div></div>
-            <input type="text" placeholder="Enter Your Pets Name" id="txtName">
-            <input min=0 type="number" placeholder="Enter Your Pets Age" id="txtAge">
-            <input type="text" placeholder="Enter Pet Breed" id="txtBreed">
-        
-            <label>Pet</label>
-            <select id="selPet">
-            <option value="none" selected disabled hidden>Select a Pet</option> 
-            <option value="Dog">Dog</option>
-            <option value="Cat">Cat</option>
-            <option value="Bird">Bird</option>
-            <option value="Rodent">Rodent</option>
-            <option value="Horse">Horse</option>
-            </select>
-            <label>Gender</label>
-            <select id="selPetGender">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-             </select>
-            <select id="selService">
-            <option value="none" selected disabled hidden>Select a Service</option>
-            <option value="Grooming">Grooming</option>
-            <option value="Teeth Cleaning">Teeth Cleaning</option>
-            <option value="Bath & Brush">Bath & Brush</option>
-            <option value="Vaccines">Vaccines</option>
-            </select>
-            <input type="text" placeholder="Enter Your Name" id="txtName1">
-            <input type="text" placeholder="Enter Your Phone Number" id="txtNumber">
-            </div>
-            <button onclick="submit();">Submit</button>  -->
-
+    <main class="container">
+        <h2 class="welcome">Welcome to The Pet Palace</h2>
         <div class="container">
             <div class="mb-3">
                 <label class="form-label">Name:</label>
@@ -77,11 +46,13 @@
                 <label class="form-label">Pet</label>
                 <select class="form-select" id="selPet">
                     <option value="none" selected disabled hidden>Select a Pet</option>
-                    <option value="Dog">Dog</option>
-                    <option value="Cat">Cat</option>
                     <option value="Bird">Bird</option>
-                    <option value="Rodent">Rodent</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Dog">Dog</option>
                     <option value="Horse">Horse</option>
+                    <option value="Rabbit">Rabbit</option>
+                    <option value="Rodent">Rodent</option>
+                    
                 </select>
             </div>
             <div class="mb-3">
@@ -92,9 +63,13 @@
                 <label class="form-label">Service:</label>
                 <select class="form-select" id="selService">
                     <option value="none" selected disabled hidden>Select a Service</option>
-                    <option value="nails cut">Nail Trim</option>
+                    <option value="teeth brushing">Teeth Brushing</option>
                     <option value="grooming">Grooming</option>
+                    <option value="nails cut">Nail Trim</option>
+                    <option value="shampoo">Shampoo</option>
                     <option value="vaccines">Vaccines</option>
+                    <option value="none" disabled>--------------</option>
+                    <option value="Royal Package">👑 Royal Package 👑</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -109,11 +84,46 @@
                 <button class="btn btn-primary" onclick="register();">Register</button>
             </div>
         </div>
+
+        <div id="pets">
+
+        </div>
     </main>
+        <!-- <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table> -->
+        
     <footer id="info">
         <!-- display salon info -->
-        
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src=scripts/register.js></script>
+    <script src="scripts/display.js"></script>
 </body>
 </html>
