@@ -66,6 +66,7 @@ function register(){
     console.log("Registering");
 
     newClient = new Client(petName.value, petAge.value, petGender.value, typePet.value, petBreed.value, petService.value, ownerName.value, ownerNumber.value);
+    
 
     if(isValid(newClient)==true){
         // push object to array
@@ -76,6 +77,8 @@ function register(){
     else{
         alert("Add a name for the Pet");
     }
+    
+    displayTable();
 };
 function clear(){
     // petName.value="";
@@ -114,6 +117,7 @@ function displaySalonInfo(){
 function init(){
     displaySalonInfo(); 
     // salon.pets.push(newClient);
-    salon.pets.push(scooby,scrappy);
+    // salon.pets.push(scooby,scrappy);
+    // displayTable();
 }
 window.onload = init;
